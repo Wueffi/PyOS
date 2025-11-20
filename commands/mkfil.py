@@ -3,7 +3,7 @@ help = "Create an empty file. Usage: mkfil <file>"
 
 def run(args):
     if not args:
-        print("Usage: touch <file>")
+        print(help)
         return
     try:
         open(args[0], 'a').close()
