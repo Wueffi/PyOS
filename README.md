@@ -5,5 +5,5 @@ Small Python-OS made by Waffle.
 2. Run: python boot.py
 3. Now you are ready! Run help to see all commands.
 
- ## Contributng:
+ ## Contributing
  If you really really need, make a PR.
