@@ -4,6 +4,7 @@ import pkgutil
 
 COMMANDS_PACKAGE = 'commands'
 
+
 def load_commands():
     commands = {}
     package = importlib.import_module(COMMANDS_PACKAGE)
@@ -14,6 +15,7 @@ def load_commands():
         if hasattr(mod, "run"):
             commands[name] = mod
     return commands
+
 
 def main():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -37,6 +39,7 @@ def main():
                 print(f"Unknown command: {name}")
         except KeyboardInterrupt:
             print("\nUse 'exit' to quit.")
+
 
 if __name__ == "__main__":
     main()
