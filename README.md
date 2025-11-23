@@ -1,4 +1,4 @@
-Small Python-OS made by Waffle.
+Small Python-OS made by Waffle, IceWizard7 & jacklak-redstone.
 
 ## Running PyOS
 1. Download and cd to the project in the terminal.
