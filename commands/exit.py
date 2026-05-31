@@ -1,5 +1,8 @@
-help = "Exit PyOS."
+import typing
 
-def run(args):
-    print("Goodbye!")
+command_help: str = 'Exit PyOS.'
+
+
+def run(_args: typing.Any) -> None:
+    print('Goodbye!')
     exit(0)

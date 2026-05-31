@@ -1,12 +1,13 @@
 import os
 import importlib
 import pkgutil
+import types
 
 COMMANDS_PACKAGE = 'commands'
 
 
-def load_commands():
-    commands = {}
+def load_commands() -> dict[str, types.ModuleType]:
+    commands: dict[str, types.ModuleType] = {}
     package = importlib.import_module(COMMANDS_PACKAGE)
     for loader, name, is_pkg in pkgutil.iter_modules(package.__path__):
         if name.startswith('_'):
@@ -17,7 +18,7 @@ def load_commands():
     return commands
 
 
-def main():
+def main() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
     print('Booting PyOS...')
     commands = load_commands()

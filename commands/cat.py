@@ -1,13 +1,14 @@
-# WAFCAT :heart:
+import typing
 
-help = "Print file contents. Usage: cat <file>"
+command_help: str = 'Print file contents. Usage: cat <file>'
 
-def run(args):
+
+def run(args: typing.Any) -> None:
     if not args:
-        print("Usage: cat <file>")
+        print('Usage: cat <file>')
         return
     try:
         with open(args[0], 'r') as f:
             print(f.read())
     except Exception as e:
-        print(f"Error: {e}")
+        print(f'Error: {e}')
